@@ -1,0 +1,8 @@
+#!/bin/bash
+
+script_path=`dirname "$0"`
+script_path=`dirname "$script_path\.."`
+
+node $script_path/app.js
+
+echo $script_path
