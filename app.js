@@ -6,10 +6,11 @@ var params = require('./arguments').parse();
 
 var app = express.createServer();
 app.configure(function(){
-    app.use(express.methodOverride());
-    app.use(express.bodyDecoder());
-    app.use(app.router);
-    app.use(express.staticProvider(params.path));
+	app.use(express.logger({ format: ':date :status :method :url' }));
+	app.use(express.methodOverride());
+	app.use(express.bodyDecoder());
+	app.use(app.router);
+	app.use(express.staticProvider(params.path));
 });
 
 app.error(function(err, req, res, next){
