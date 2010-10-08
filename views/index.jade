@@ -1,0 +1,9 @@
+!!! 5
+html
+	head
+		title #{dirname}
+	body
+		ul
+			- each file in files
+				li 
+					a(href=file.filename) #{file.basename}

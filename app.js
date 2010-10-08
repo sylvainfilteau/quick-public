@@ -11,12 +11,17 @@ app.configure(function(){
 	app.use(express.bodyDecoder());
 	app.use(app.router);
 	app.use(express.staticProvider(params.path));
+	app.use(require('./fileIndex')(params.path));
 });
 
 app.error(function(err, req, res, next){
 	console.log('here is an error :');
 	console.log(err);
 	next(err);
+});
+
+app.set('view options', {
+	layout: false
 });
 
 app.listen(params.port);
