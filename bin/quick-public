@@ -3,6 +3,6 @@
 script_path=`dirname "$0"`
 script_path=`dirname "$script_path\.."`
 
-node $script_path/app.js
+node $script_path/index.js
 
 echo $script_path
