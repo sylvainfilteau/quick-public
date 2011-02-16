@@ -5,14 +5,14 @@ quick-public is a tool aiming to facilitate the creation of a HTTP server with t
 
 The primary use is when you want to test quickly an html page doing some ajax stuff, you need to run the page over HTTP. In the past, I created a Vhost on Apache and setup permissions to let the webserver see files on my home directory. But no more ! All I have to do is :
 
-node path/to/quick-public/app.js
+node path/to/quick-public
 
 and browse to localhost:3000.
 
 Requirements
 -------------
 
-You need to install [node.js](http://www.nodejs.org) and [express](http://www.expressjs.com).
+You need to install [node.js](http://www.nodejs.org), [express](http://www.expressjs.com) and [jade](http://jade-lang.com/).
 
 History
 --------
